@@ -1,0 +1,46 @@
+{%include "uheader.html" %}
+
+   <div class="page-nav no-margin row">
+            <div class="container">
+                <div class="row">
+                    <h2 class="text-start">Satellite Image Classification</h2>
+                    <ul>
+                        <li> <a href="#"><i class="bi bi-house-door"></i> Home</a></li>
+                        <li><i class="bi bi-chevron-double-right pe-2"></i>Image Detection</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+ <div class="row contact-rooo big-padding no-margin">
+        <div class="container">
+           <div class="row">
+<form action="dr_detection2" enctype="multipart/form-data" method="post">
+            <div style="padding:20px" class="col-sm-7">
+            <h2 class="fs-4 fw-bold" >Image Detection : {{ res[0][0] }}</h2>
+                <div class="row cont-row">
+                    <div class="col-sm-8">
+                        <img src="{{ url_for('static',filename='image_detection.jpg')}}" width="350" height="350" alt=""><br><br>
+                        <style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+                        <table>
+  <tr>
+    <th>CLASS&nbsp;NAME</th>
+    <th> REPORT</th>
+  </tr>
+  <tr>
+    <td>{{res[0][0]}}</td>
+    <td>{{res[0][1]}}</td>
+  </tr>
+</table>
+                    </div>
+                </div>
+            </div>
+           </form>
+          </div>
+        </div>
+      </div>
+<br><br>
+{%include "footer.html" %}
